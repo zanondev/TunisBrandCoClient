@@ -1,0 +1,34 @@
+.footer {
+  height: 100px;
+  width: 100%;
+  background-color: #e2eefd;
+  display: flex;
+  align-items: center;
+  background: rgb(41, 41, 41);
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+}
+
+.footer-content {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  display: contents;
+  display: block !important;
+  text-align: center;
+}
+
+.iconify {
+  width: 35px;
+  height: 35px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+#iconify:hover {
+  transition: 0.5s;
+
+  opacity: 0.5;
+}
