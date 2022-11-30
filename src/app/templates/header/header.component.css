@@ -9,10 +9,6 @@
     padding: 0;
     position: absolute;
 
-
- 
-  
-   
 }
 
 .navbar{
@@ -30,6 +26,7 @@
 }
 
 .img-logo{
+    padding-top: 10px;
     height: 300px;
     width: 350px;
 }
