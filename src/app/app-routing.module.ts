@@ -7,14 +7,8 @@ const routes: Routes = [
   {
     path: 'clients',
     children: [
-      {
-        path: 'form',
-        component: ClientFormComponent,
-      },
-      {
-        path: 'table',
-        component: ClientTableComponent,
-      },
+      { path: 'form', component: ClientFormComponent },
+      { path: 'table', component: ClientTableComponent },
     ],
   },
 ];
