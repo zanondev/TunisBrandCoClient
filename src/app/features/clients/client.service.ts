@@ -5,7 +5,7 @@ import { IClient } from "./client.model";
 
 @Injectable({providedIn : "root"})
 export class ClientService{
-    private api: string = 'https://localhost:5001';
+    private api: string = "http://localhost:5000/api";
 
     constructor(private httpClient: HttpClient){}
 
