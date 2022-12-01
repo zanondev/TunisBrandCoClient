@@ -3,9 +3,9 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { IClient } from "./client.model";
 
-@Injectable()
+@Injectable({providedIn : "root"})
 export class ClientService{
-    private api: string = 'http://localhost:5200';
+    private api: string = 'https://localhost:5001';
 
     constructor(private httpClient: HttpClient){}
 

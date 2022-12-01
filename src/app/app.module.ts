@@ -9,12 +9,13 @@ import { ClientTableComponent } from './features/clients/client-table/client-tab
 import { ClientFormComponent } from './features/clients/client-form/client-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ClientService } from './features/clients/client.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
+    FooterComponent,  
     ClientTableComponent,
     ClientFormComponent
   ],
@@ -24,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [ClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

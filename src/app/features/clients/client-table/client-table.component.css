@@ -1,0 +1,35 @@
+.table
+{
+    width: 80%;
+    text-align: center;
+    font-size: 30px;
+}
+ul{
+    list-style: none;
+}
+#table tr.Feito td {
+    background-color: rgb(95, 12, 12);
+}
+#table td {
+    cursor: pointer;
+}
+
+.sec-table{
+    padding-top: 500px;
+    padding-bottom: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+}
+
+h5{
+    padding-top: 450px;
+    padding-bottom: 0;
+}
+
+
+
