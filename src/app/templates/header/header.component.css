@@ -1,52 +1,68 @@
 .header {
-    width: 100%;
-    height: 400px;
-    background: rgb(41, 41, 41);
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    position: absolute;
+  width: 100%;
+  height: 400px;
+  background: rgb(41, 41, 41);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 4px 5px rgba(0, 0, 0, 0.14),
+    0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+
+.btn-secondary {
+    background-color: #ffd000!important;
+    color: black;
+    font-weight: bold;
+    box-shadow: 10px 5px 5px black;
 
 }
 
-.navbar{
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    position: absolute;
+.dropdowns_header {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  padding: 20px;
 }
 
-.navbar-content1{
-    display:flex;
-    padding-right: 50px;
-
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
 }
 
-.img-logo{
-    padding-top: 10px;
-    height: 300px;
-    width: 350px;
+.navbar-content1 {
+  display: flex;
+  padding-right: 50px;
 }
 
-h1{
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-    font-size: 100px;
-    color: #fff;
-    padding: 0;
-    margin: 0;
+.img-logo {
+  padding-top: 10px;
+  height: 300px;
+  width: 350px;
+  cursor: pointer;
 }
 
-.tns{
-    color: #ffd000;
-    font-size: 150px;
-   letter-spacing: 50px;
+h1 {
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  font-size: 100px;
+  color: #fff;
+  padding: 0;
+  margin: 0;
 }
 
-.navbar-content2{
-    display: grid;
-    text-align: center;
+.tns {
+  color: #ffd000;
+  font-size: 150px;
+  letter-spacing: 50px;
+}
+
+.navbar-content2 {
+  display: grid;
+  text-align: center;
 }

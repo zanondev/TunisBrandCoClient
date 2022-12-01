@@ -2,20 +2,76 @@
   <nav class="navbar">
     <div class="navbar-content">
       <div class="navbar-content1">
+        <img routerLink="/"
+          src="../../../assets/img/yellow.png"
+          alt="img-logo"
+          class="img-logo"
+        />
 
-        <img src="../../../assets/img/yellow.png" alt="img-logo" class="img-logo"/>
-  
         <div class="navbar-content2">
-          <h1 class="tns">TNS</h1> <h1 class="brand-co">BRAND COMPANY</h1> 
-          <a class="nav-link" style="color: white;" routerLink="/clients/table" routerLinkActive="active">Table</a>
+          <h1 class="tns">TNS</h1>
+          <h1 class="brand-co">BRAND COMPANY</h1>
+          <div class="dropdowns_header">
+            <div class="dropdown">
+              <a
+                class="btn btn-secondary dropdown-toggle"
+                href=""
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Clientes
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/clients/table">Cadastrar cliente</a></li>
+                <li><a class="dropdown-item" routerLink="/clients/table">Gerenciar clientes</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <a
+                class="btn btn-secondary dropdown-toggle"
+                href=""
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Produtos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="">Cadastrar produto</a></li>
+                <li><a class="dropdown-item" href="">Gerenciar produtos</a></li>
+                <li><a class="dropdown-item" href="">Gerenciar estoque</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <a
+                class="btn btn-secondary dropdown-toggle"
+                href=""
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Pedidos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="">Cadastrar pedido</a></li>
+                <li><a class="dropdown-item" href="">Gerenciar pedidos</a></li>
+                <li>
+                  <a class="dropdown-item" href="">Acompanhar pedido</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- <a
+            class="nav-link"
+            style="color: white"
+            routerLink="/clients/table"
+            routerLinkActive="active"
+            >Table</a
+          > -->
         </div>
-  
       </div>
     </div>
-
-   
-
-   
   </nav>
-
 </div>
