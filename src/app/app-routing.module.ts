@@ -6,6 +6,7 @@ import { OrderFormComponent } from './features/orders/order-form/order-form.comp
 import { OrderTableComponent } from './features/orders/order-table/order-table.component';
 import { ProductFormComponent } from './features/products/product-form/product-form.component';
 import { ProductTableComponent } from './features/products/product-table/product-table.component';
+import { HomePageComponent } from './templates/Index/home-page/home-page.component';
 
 const routes: Routes = [
   {
@@ -28,7 +29,11 @@ const routes: Routes = [
       { path: 'table', component: OrderTableComponent },
       { path: 'form', component: OrderFormComponent },
     ],
-  }
+  },
+  {
+    path: '',
+    component: HomePageComponent,
+  },
 ];
 
 @NgModule({

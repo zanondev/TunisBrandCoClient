@@ -4,23 +4,23 @@
         <div class="form-group">
             <label for="name" class="form-label">Nome</label>
             <input id="name" formControlName="name" type="text" class="form-control" autocomplete="off" [ngClass]="{
-             'valid': form.get('name')?.valid && !form.get('name')?.pristine,
-             'invalid': form.get('name')?.invalid && !form.get('name')?.pristine}">
+             'valid': form.get('client.name')?.valid && !form.get('client.name')?.pristine,
+             'invalid': form.get('client.name')?.invalid && !form.get('client.name')?.pristine}">
         </div>
         <br>
         <div class="form-group">
             <label for="cpf" class="form-label">CPF</label>
             <input id="cpf" formControlName="cpf" type="text" class="form-control" autocomplete="off" [ngClass]="{ 
-                'valid':  form.get('cpf')?.valid && !form.get('cpf')?.pristine,
-                'invalid': form.get('cpf')?.invalid && !form.get('cpf')?.pristine
+                'valid':  form.get('client.cpf')?.valid && !form.get('client.cpf')?.pristine,
+                'invalid': form.get('client.cpf')?.invalid && !form.get('client.cpf')?.pristine
                }">
         </div>
         <br>
         <div class="form-group">
             <label for="birthDate" class="form-label">Data de Nascimento</label>
             <input id="birthDate" formControlName="birthDate" type="date" class="form-control" autocomplete="off" [ngClass]="{ 
-                'valid':  form.get('birthDate')?.valid && !form.get('birthDate')?.pristine,
-                'invalid': form.get('birthDate')?.invalid && !form.get('birthDate')?.pristine
+                'valid':  form.get('client.birthDate')?.valid && !form.get('client.birthDate')?.pristine,
+                'invalid': form.get('client.birthDate')?.invalid && !form.get('client.birthDate')?.pristine
                }">
         </div>
         <br>

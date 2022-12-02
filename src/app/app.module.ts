@@ -14,6 +14,7 @@ import { ProductTableComponent } from './features/products/product-table/product
 import { ProductFormComponent } from './features/products/product-form/product-form.component';
 import { OrderTableComponent } from './features/orders/order-table/order-table.component';
 import { OrderFormComponent } from './features/orders/order-form/order-form.component';
+import { HomePageComponent } from './templates/Index/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { OrderFormComponent } from './features/orders/order-form/order-form.comp
     ProductTableComponent,
     ProductFormComponent,
     OrderTableComponent,
-    OrderFormComponent
+    OrderFormComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
