@@ -10,6 +10,10 @@ import { ClientFormComponent } from './features/clients/client-form/client-form.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ClientService } from './features/clients/client.service';
+import { ProductTableComponent } from './features/products/product-table/product-table.component';
+import { ProductFormComponent } from './features/products/product-form/product-form.component';
+import { OrderTableComponent } from './features/orders/order-table/order-table.component';
+import { OrderFormComponent } from './features/orders/order-form/order-form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { ClientService } from './features/clients/client.service';
     HeaderComponent,
     FooterComponent,  
     ClientTableComponent,
-    ClientFormComponent
+    ClientFormComponent,
+    ProductTableComponent,
+    ProductFormComponent,
+    OrderTableComponent,
+    OrderFormComponent
   ],
   imports: [
     BrowserModule,

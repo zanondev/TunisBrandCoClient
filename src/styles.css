@@ -8,8 +8,43 @@ html, body {
 
 .sections{
     padding-top: 500px;
-    padding-bottom: 600px;
+    padding-bottom: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
+.table
+{
+    width: 80%;
+    text-align: center;
+    font-size: 30px;
+}
+ul{
+    list-style: none;
+}
+#table tr.Feito td {
+    background-color: rgb(95, 12, 12);
+}
+#table td {
+    cursor: pointer;
+}
+
+.btn-danger, .btn-warning{
+    height: 30px;
+    width: 30px;
+    
+    color: white;
+    font-weight: bold;
+}
+
+
+.btn-action{
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+

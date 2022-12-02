@@ -1,0 +1,9 @@
+.form-div-btn{
+ display: flex;
+ gap: 10px;
+}
+
+.form-label{
+    color: white;
+    font-weight: bold;
+}

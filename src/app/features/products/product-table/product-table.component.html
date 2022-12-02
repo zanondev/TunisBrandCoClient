@@ -4,20 +4,22 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Nome</th>
-                    <th>CPF</th>
-                    <th>Data de Nascimento</th>
-                    <th>Pontuação</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                    <th>Acaba em</th>
+                    <th>Ativo</th>
                     <th>Ação</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let client of clients">
-                    <td>{{ client.id }}</td>
-                    <td>{{ client.name }}</td>
-                    <td>{{ client.cpf }}</td>
-                    <td>{{ client.birthDate | date:'dd/MM/yyyy' }}</td>
-                    <td>{{ client.loyaltyPoints }}</td>  
+                <tr *ngFor="let product of products">
+                    <td>{{ product.id }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>{{ product.price }}</td>
+                    <td>{{ product.stockQuantity }}</td>
+                    <td>{{ product.expiryDate | date:'dd/MM/yyyy' }}</td>  
+                    <td>{{ product.isActive }}</td>  
                     <td class="btn-action">
                         <div class="btn-div">
                             <button class="btn btn-warning btn-danger" >X</button>

@@ -1,0 +1,51 @@
+
+    <section class="sections">
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <!-- export interface IOrder{
+                        id: number;
+                        client: IClient;
+                        product: IProduct;
+                        productQuantity: number;
+                        totalPrice: number;
+                        orderDate: Date;
+                        status: number;
+                      } -->
+                      
+                    <th>Id</th>
+                    <th>Id cliente</th>
+                    <th>Id produto</th>
+                    <th>Quantidade</th>
+                    <th>Valor total</th>
+                    <th>Data</th>
+                    <th>Status</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of orders">
+                    <td>{{ order.id }}</td>
+                    <td>{{ order.client }}</td>
+                    <td>{{ order.product }}</td>
+                    <td>{{ order.productQuantity}}</td>
+                    <td>{{ order.totalPrice }}</td>  
+                    <td>{{ order.orderDate | date:'dd/MM/yyyy'  }}</td>  
+                    <td>{{ order.status }}</td>  
+                    <td class="btn-action">
+                        <div class="btn-div">
+                            <button class="btn btn-warning btn-danger" >X</button>
+                        </div>
+                        <div>
+                            <button class="btn btn-warning btn-edit">E</button>
+                        </div>
+                      </td>         
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+
+
+
+

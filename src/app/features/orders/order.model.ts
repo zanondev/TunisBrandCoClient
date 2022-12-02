@@ -4,8 +4,8 @@ import { IProduct } from "../products/product.model";
 
 export interface IOrder{
     id: number;
-    client: IClient;
-    product: IProduct;
+    client: number;
+    product: number;
     productQuantity: number;
     totalPrice: number;
     orderDate: Date;
