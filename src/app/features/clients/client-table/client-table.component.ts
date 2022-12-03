@@ -23,15 +23,20 @@ export class ClientTableComponent implements OnInit {
     })
   }
 
-   public updateClient(id:number)
+   public updateClientTable(id:number)
    {
-    this.router.navigate(['/client/update', id])
+    this.router.navigate(['/clients/edit', id])
    }
 
-  //  public deletar(cpfCLiente:string){
-  //   this.clientService.deleteCliente(cpfCLiente)
-  //   .pipe(take(1)).subscribe(() => {
-  //     alert(O cliente com CPF: ${cpfCLiente} foi alterado com sucesso!);
-  //   });
-  //  }
+   public deleteClienteTable(cpf: string) {
+    this.clientService
+      .deleteClient(cpf)
+      .pipe(take(1))
+      .subscribe(() => {
+      });
+      
+      alert('O cliente foi deletado com sucesso!');
+      location.reload();
+  }
+
 }

@@ -15,6 +15,7 @@ import { ProductFormComponent } from './features/products/product-form/product-f
 import { OrderTableComponent } from './features/orders/order-table/order-table.component';
 import { OrderFormComponent } from './features/orders/order-form/order-form.component';
 import { HomePageComponent } from './templates/Index/home-page/home-page.component';
+import { ClientEditComponent } from './features/clients/client-edit/client-edit.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HomePageComponent } from './templates/Index/home-page/home-page.compone
     ProductFormComponent,
     OrderTableComponent,
     OrderFormComponent,
-    HomePageComponent
+    HomePageComponent,
+    ClientEditComponent
   ],
   imports: [
     BrowserModule,

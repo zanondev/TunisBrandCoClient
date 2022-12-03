@@ -16,4 +16,14 @@ export class ClientService{
     public getClient(): Observable<IClient[]>{
         return this.httpClient.get<IClient[]>(`${this.api}/Client`);
     };
+
+    
+    public deleteClient(cpf:String): Observable<boolean>{
+        return this.httpClient.delete<boolean>(`${this.api}/Client/${cpf}`);
+    };
+
+    public updateClient(newClient: IClient): Observable<boolean> {
+        return this.httpClient.put<boolean>(`${this.api}/Client`, newClient);
+    };
+
 }

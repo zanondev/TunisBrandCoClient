@@ -14,6 +14,11 @@ export class ProductService{
     };
 
     public getProduct(): Observable<IProduct[]>{
-        return this.httpClient.get<IProduct[]>(`${this.api}/Products`);
+        return this.httpClient.get<IProduct[]>(`${this.api}/Product`);
     };
+
+    public UpdateStatusProduct(id: number): Observable<boolean> {
+        return this.httpClient.patch<boolean>(`${this.api}/Product?id=${id}`, id);
+      }
+ 
 }

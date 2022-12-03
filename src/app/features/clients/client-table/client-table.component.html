@@ -20,10 +20,10 @@
                     <td>{{ client.loyaltyPoints }}</td>  
                     <td class="btn-action">
                         <div class="btn-div">
-                            <button class="btn btn-warning btn-danger" >X</button>
+                            <i class="bi bi-trash-fill" title="Deletar" (click)="deleteClienteTable(client.cpf)"></i>
                         </div>
                         <div>
-                            <button class="btn btn-warning btn-edit">E</button>
+                            <i class="bi bi-pen-fill" title="Editar" (click)="updateClientTable(client.id)"></i>
                         </div>
                       </td>         
                 </tr>

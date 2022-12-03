@@ -26,6 +26,13 @@ export class OrderTableComponent {
     this.router.navigate(['/orders/update', id])
    }
 
+   public deleteOrderTable(id: number) {
+   };
+
+   public updateOrderTable(id: number) {
+  };
+
+
   //  public deletar(cpfCLiente:string){
   //   this.clientService.deleteCliente(cpfCLiente)
   //   .pipe(take(1)).subscribe(() => {

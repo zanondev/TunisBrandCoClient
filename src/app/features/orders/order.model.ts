@@ -11,5 +11,6 @@ export interface IOrder{
     totalPrice: number;
     orderDate: Date;
     status: number;
-
+    clientId: number;
+    productId: number;
   }

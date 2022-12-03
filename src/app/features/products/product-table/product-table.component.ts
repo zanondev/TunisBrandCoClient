@@ -26,6 +26,19 @@ export class ProductTableComponent implements OnInit {
    {
     this.router.navigate(['/products/update', id])
    }
+   public UpdateStatusProductTable(id: number) {
+    this.productService
+      .UpdateStatusProduct(id)
+      .pipe(take(1))
+      .subscribe(() => {
+      });
+      
+      alert('O status do produto foi alterado com sucesso!');
+      location.reload();
+  };
+
+  public updateProductTable(id: number) {
+  };
 
   //  public deletar(cpfCLiente:string){
   //   this.clientService.deleteCliente(cpfCLiente)

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ClientEditComponent } from './features/clients/client-edit/client-edit.component';
 import { ClientFormComponent } from './features/clients/client-form/client-form.component';
 import { ClientTableComponent } from './features/clients/client-table/client-table.component';
 import { OrderFormComponent } from './features/orders/order-form/order-form.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
     children: [
       { path: 'table', component: ClientTableComponent },
       { path: 'form', component: ClientFormComponent },
+      { path: 'edit/:id', component: ClientEditComponent },
     ],
   },
   {

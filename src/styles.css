@@ -8,7 +8,7 @@ html, body {
 
 .sections{
     padding-top: 500px;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -44,6 +44,34 @@ ul{
     display: flex;
     justify-content: center;
 }
+
+.form-div-btn{
+    display: flex;
+    gap: 10px;
+   }
+   
+   .form-label{
+       color: white;
+       font-weight: bold;
+   }
+
+   .form-group {
+    width: 400px;
+   }
+
+   .bi-pen-fill{
+    color: rgb(245, 230, 30);
+   }
+
+   .bi-trash-fill
+   {
+    color:rgb(185, 43, 18);
+   }
+
+   .bi-pen-fill, .bi-trash-fill {
+    cursor: pointer;
+   }
+
 
 
 
