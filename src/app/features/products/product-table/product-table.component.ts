@@ -38,13 +38,7 @@ export class ProductTableComponent implements OnInit {
   };
 
   public updateProductTable(id: number) {
+    this.router.navigate(['/products/edit', id])
   };
-
-  //  public deletar(cpfCLiente:string){
-  //   this.clientService.deleteCliente(cpfCLiente)
-  //   .pipe(take(1)).subscribe(() => {
-  //     alert(O cliente com CPF: ${cpfCLiente} foi alterado com sucesso!);
-  //   });
-  //  }
 
 }

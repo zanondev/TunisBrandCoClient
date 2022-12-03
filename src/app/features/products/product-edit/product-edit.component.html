@@ -3,14 +3,14 @@
         <br>
         <div class="form-group">
             <label for="price" class="form-label">Preço</label>
-            <input id="price" formControlName="price" type="number" class="form-control" autocomplete="off" [ngClass]="{
+            <input id="price" formControlName="price" type="number" class="form-control" [(ngModel)]="product.price" autocomplete="off" [ngClass]="{
              'valid': form.get('product.price')?.valid && !form.get('product.price')?.pristine,
              'invalid': form.get('product.price')?.invalid && !form.get('product.price')?.pristine}">
         </div>
         <br>
         <div class="form-group">
             <label for="expiryDate" class="form-label">Fim da coleção</label>
-            <input id="expiryDate" formControlName="expiryDate" type="date" class="form-control" autocomplete="off" [ngClass]="{ 
+            <input id="expiryDate" formControlName="expiryDate" type="date" class="form-control" [(ngModel)]="product.expiryDate" autocomplete="off" [ngClass]="{ 
                 'valid':  form.get('product.expiryDate')?.valid && !form.get('product.expiryDate')?.pristine,
                 'invalid': form.get('product.expiryDate')?.invalid && !form.get('product.expiryDate')?.pristine
                }">
@@ -18,7 +18,7 @@
         <br>
         <div class="form-group">
             <label for="stockQuantity" class="form-label">Estoque</label>
-            <input id="stockQuantity" formControlName="stockQuantity" type="number" class="form-control" autocomplete="off" [ngClass]="{ 
+            <input id="stockQuantity" formControlName="stockQuantity" type="number" class="form-control" [(ngModel)]="product.stockQuantity" autocomplete="off" [ngClass]="{ 
                 'valid':  form.get('product.stockQuantity')?.valid && !form.get('product.stockQuantity')?.pristine,
                 'invalid': form.get('product.stockQuantity')?.invalid && !form.get('product.stockQuantity')?.pristine
                }">
@@ -26,17 +26,10 @@
         <br>
         <div class="form-group">
             <label for="description" class="form-label">Descrição</label>
-            <select class="form-control" id="exampleFormControlSelect1" input id="description" formControlName="description" type="text" class="form-control" autocomplete="off" [ngClass]="{ 
+            <input id="description" formControlName="description" type="text" class="form-control" [(ngModel)]="product.description" autocomplete="off" [ngClass]="{ 
                 'valid':  form.get('product.description')?.valid && !form.get('product.description')?.pristine,
                 'invalid': form.get('product.description')?.invalid && !form.get('product.description')?.pristine
                }">
-                <option>Camiseta modelo BatDog</option>
-                <option>Camiseta modelo Ca$h</option>
-                <option>Camiseta modelo Dolar</option>
-                <option>Camiseta modelo RGB</option>
-                <option>Camiseta modelo Yellow</option>
-                <option>Camiseta modelo Ward</option>
-              </select>
         </div>
         <br>
         <div class="form-div-btn">

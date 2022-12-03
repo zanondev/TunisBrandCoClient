@@ -16,4 +16,10 @@ export class OrderService{
     public getOrder(): Observable<IOrder[]>{
         return this.httpClient.get<IOrder[]>(`${this.api}/orders`);
     };
+
+    public deleteOrder(id: number): Observable<boolean> {
+        return this.httpClient.delete<boolean>(`${this.api}/orders?orderId=${id}`);
+      }
+
+
 }

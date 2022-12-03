@@ -62,6 +62,7 @@ export class OrderFormComponent implements OnInit{
         .pipe(take(1))
         .subscribe(() => {
           alert('Pedido cadastrado com sucesso!');
+          location.reload();
         });
     }
   }

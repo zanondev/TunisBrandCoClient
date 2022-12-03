@@ -20,5 +20,9 @@ export class ProductService{
     public UpdateStatusProduct(id: number): Observable<boolean> {
         return this.httpClient.patch<boolean>(`${this.api}/Product?id=${id}`, id);
       }
+
+      public updateProduct(editedProduct: IProduct): Observable<boolean> {
+        return this.httpClient.put<boolean>(`${this.api}/Product`, editedProduct);
+    };
  
 }

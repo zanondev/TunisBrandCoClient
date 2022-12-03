@@ -29,6 +29,7 @@ export class ClientTableComponent implements OnInit {
    }
 
    public deleteClienteTable(cpf: string) {
+    if(confirm('Você deseja deletar o cliente? Esta ação é permanente.')){
     this.clientService
       .deleteClient(cpf)
       .pipe(take(1))
@@ -36,7 +37,7 @@ export class ClientTableComponent implements OnInit {
       });
       
       alert('O cliente foi deletado com sucesso!');
-      location.reload();
+      location.reload();}
   }
 
 }

@@ -27,6 +27,16 @@ export class OrderTableComponent {
    }
 
    public deleteOrderTable(id: number) {
+    if(confirm('Você deseja deletar o pedido? Esta ação é permanente.')){
+    this.orderService
+    .deleteOrder(id)
+    .pipe(take(1))
+    .subscribe(() => {
+    });
+    
+    alert('O pedido foi deletado com sucesso!');
+    location.reload();
+  }
    };
 
    public updateOrderTable(id: number) {

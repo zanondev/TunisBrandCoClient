@@ -21,8 +21,7 @@
 }
 
 .iconify {
-  width: 35px;
-  height: 35px;
+
   padding-right: 5px;
   padding-left: 5px;
 }
@@ -30,4 +29,8 @@
 #iconify:hover {
   transition: 0.5s;
   opacity: 0.5;
+}
+
+.footer-icons{
+  gap: 50px;
 }

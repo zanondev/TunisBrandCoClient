@@ -68,9 +68,18 @@ ul{
     color:rgb(185, 43, 18);
    }
 
-   .bi-pen-fill, .bi-trash-fill {
+   .bi-pen-fill, .bi-trash-fill, .bi-toggle2-on, .bi-toggle2-off {
     cursor: pointer;
    }
+
+   .bi-toggle2-on{
+    color: rgb(39, 168, 27);
+   }
+
+   .bi-toggle2-off{
+    color:rgb(185, 43, 18);
+   }
+
 
 
 

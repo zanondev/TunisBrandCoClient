@@ -22,7 +22,9 @@
                     <td>{{ product.isActive }}</td>  
                     <td class="btn-action">
                         <div class="btn-div">
-                            <i class="bi bi-trash-fill" title="Deletar" (click)="UpdateStatusProductTable(product.id)"></i>
+                            <i class="bi bi-toggle2-off" title="Ativar"  [hidden]="product.isActive" (click)="UpdateStatusProductTable(product.id)"></i>
+                            <i class="bi bi-toggle2-on" [hidden]="!product.isActive" title="Desativar" (click)="UpdateStatusProductTable(product.id)"></i>
+        
                         </div>
                         <div>
                             <i class="bi bi-pen-fill" title="Editar" (click)="updateProductTable(product.id)"></i>
