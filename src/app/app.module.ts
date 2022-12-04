@@ -18,6 +18,9 @@ import { HomePageComponent } from './templates/Index/home-page/home-page.compone
 import { ClientEditComponent } from './features/clients/client-edit/client-edit.component';
 import { ProductEditComponent } from './features/products/product-edit/product-edit.component';
 import { OrderEditComponent } from './features/orders/order-edit/order-edit.component';
+import { AboutComponent } from './templates/about/about.component';
+import { ProductAddStockComponent } from './features/products/product-add-stock/product-add-stock.component';
+import { OrderFollowComponent } from './features/orders/order-follow/order-follow.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { OrderEditComponent } from './features/orders/order-edit/order-edit.comp
     HomePageComponent,
     ClientEditComponent,
     ProductEditComponent,
-    OrderEditComponent
+    OrderEditComponent,
+    AboutComponent,
+    ProductAddStockComponent,
+    OrderFollowComponent
   ],
   imports: [
     BrowserModule,

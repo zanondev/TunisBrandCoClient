@@ -21,10 +21,12 @@
                     <td>{{ product.expiryDate | date:'dd/MM/yyyy' }}</td>  
                     <td>{{ product.isActive }}</td>  
                     <td class="btn-action">
+                        <div class="btn-add">
+                            <i class="bi bi-plus-circle-fill" title="Adicionar em estoque" (click)="addStockProductTable(product.id)"></i>
+                        </div>
                         <div class="btn-div">
                             <i class="bi bi-toggle2-off" title="Ativar"  [hidden]="product.isActive" (click)="UpdateStatusProductTable(product.id)"></i>
                             <i class="bi bi-toggle2-on" [hidden]="!product.isActive" title="Desativar" (click)="UpdateStatusProductTable(product.id)"></i>
-        
                         </div>
                         <div>
                             <i class="bi bi-pen-fill" title="Editar" (click)="updateProductTable(product.id)"></i>

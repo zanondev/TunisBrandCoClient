@@ -1,0 +1,42 @@
+<div class="sections">
+  <form [formGroup]="form" (ngSubmit)="saveForm()">
+    <br />
+    <div class="form-group">
+      <label for="quantity" class="form-label">Acidicionar quantidade:</label>
+      <input
+        id="quantity"
+        formControlName="quantity"
+        type="number"
+        class="form-control"
+        [(ngModel)]="quantity"
+        autocomplete="off"
+        [ngClass]="{
+          valid: form.get('quantity')?.valid && !form.get('quantity')?.pristine,
+          invalid:
+            form.get('quantity')?.invalid && !form.get('quantity')?.pristine
+        }"
+      />
+    </div>
+    <br />
+    <div class="form-div-btn">
+      <button class="btn btn-primary" (click)="cleanForm()">Voltar</button>
+      <input type="submit" value="Salvar" class="btn btn-primary" />
+    </div>
+
+    <br />
+    <div class="alert alert-danger mt-1" *ngIf="form.invalid && !form.pristine">
+      <span *ngIf="form.get('id')?.errors?.['required']"
+        >O Id do produto é obrigatório!<br
+      /></span>
+      <span *ngIf="form.get('quantityToAdd')?.errors?.['required']"
+        >A quantidade a ser adicionada é obrigatória!<br
+      /></span>
+      <span *ngIf="form.get('id')?.errors?.['min']"
+        >O Id do produto deve ser maior que 0<br
+      /></span>
+      <span *ngIf="form.get('quantityToAdd')?.errors?.['min']"
+        >O preço deve ser maior que 0<br
+      /></span>
+    </div>
+  </form>
+</div>

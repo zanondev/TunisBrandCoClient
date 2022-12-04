@@ -41,4 +41,9 @@ export class ProductTableComponent implements OnInit {
     this.router.navigate(['/products/edit', id])
   };
 
+
+public addStockProductTable(id: number) {
+    this.router.navigate(['/products/add', id])
+  };
+
 }

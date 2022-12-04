@@ -25,5 +25,9 @@ export class OrderService {
     return this.httpClient.patch<boolean>(`${this.api}/orders?orderId=${id}&status=${status}`, id);
   }
 
+  public getStatus(id: number): Observable<boolean> {
+    return this.httpClient.get<boolean>(`${this.api}/orders/0?orderId=${id}`);
+  }
+
   }
 

@@ -1,0 +1,31 @@
+<div class="sections">
+  <div class="main">
+    <div class="head">
+      <p class="head_1"><span>STATUS</span></p>
+    </div>
+
+    <ul>
+      <li>
+        <i *ngIf="status1" class="icon uil uil-capture"></i>
+        <div class="progress one">
+          <i class="uil uil-check"></i>
+        </div>
+        <p class="text">Em andamento</p>
+      </li>
+      <li>
+        <i *ngIf="status2" class="icon uil uil-clipboard-notes"></i>
+        <div class="progress two">
+          <i  class="uil uil-check"></i>
+        </div>
+        <p class="text">Em transito</p>
+      </li>
+      <li>
+        <i *ngIf="status3" class="icon uil uil-credit-card"></i>
+        <div class="progress three">
+          <i class="uil uil-check"></i>
+        </div>
+        <p class="text">Finalizado</p>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -27,8 +27,15 @@
                     <td>{{ order.clientName }}</td>
                     <td>{{ order.orderDate | date:'dd/MM/yyyy' }}</td>
                     <td>{{ order.totalPrice}}</td>
-                    <td>{{ order.status }}</td>   
+                    <td [ngSwitch]="order.status">
+                        <span *ngSwitchCase="1">Em andamento</span>
+                        <span *ngSwitchCase="2">Em transito</span>
+                        <span *ngSwitchCase="3">Finalizado</span>
+                    </td> 
                     <td class="btn-action">
+                        <div class="follow-order">
+                            <i class="bi bi-airplane-fill" title="Acompanhar" (click)="followOrder(order.status)"></i>
+                        </div>
                         <div class="btn-div">
                             <i class="bi bi-trash-fill" title="Deletar" (click)="deleteOrderTable(order.id)"></i>
                         </div>

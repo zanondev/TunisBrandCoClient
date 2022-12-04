@@ -68,8 +68,16 @@ ul{
     color:rgb(185, 43, 18);
    }
 
-   .bi-pen-fill, .bi-trash-fill, .bi-toggle2-on, .bi-toggle2-off {
+   .bi {
     cursor: pointer;
+   }
+
+   .bi-plus-circle-fill{
+    color: rgb(31, 197, 31);
+   }
+
+   .bi-airplane-fill{
+    color: rgb(31, 197, 31);
    }
 
    .bi-toggle2-on{
