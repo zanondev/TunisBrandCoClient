@@ -21,10 +21,6 @@ export class OrderTableComponent {
     })
   }
 
-   public updateOrder(id:number)
-   {
-    this.router.navigate(['/orders/update', id])
-   }
 
    public deleteOrderTable(id: number) {
     if(confirm('Você deseja deletar o pedido? Esta ação é permanente.')){
@@ -40,13 +36,8 @@ export class OrderTableComponent {
    };
 
    public updateOrderTable(id: number) {
+    this.router.navigate(['/orders/edit', id])
   };
 
 
-  //  public deletar(cpfCLiente:string){
-  //   this.clientService.deleteCliente(cpfCLiente)
-  //   .pipe(take(1)).subscribe(() => {
-  //     alert(O cliente com CPF: ${cpfCLiente} foi alterado com sucesso!);
-  //   });
-  //  }
 }
