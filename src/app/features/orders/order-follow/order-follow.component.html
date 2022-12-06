@@ -6,23 +6,33 @@
 
     <ul>
       <li>
-        <i *ngIf="status1" class="icon uil uil-capture"></i>
-        <div class="progress one">
-          <i class="uil uil-check"></i>
+        <div class="status-active progress one">
+          <i
+            class="bi bi-clock-history"
+            [ngClass]="{ 'icon-active': status === 2 || status === 3 }"
+          ></i>
         </div>
         <p class="text">Em andamento</p>
+        s
       </li>
       <li>
-        <i *ngIf="status2" class="icon uil uil-clipboard-notes"></i>
-        <div class="progress two">
-          <i  class="uil uil-check"></i>
+        <div
+          class="progress"
+          [ngClass]="{ 'status-active': status === 2 || status === 3 }"
+        >
+          <i
+            class="bi bi-car-front-fill"
+            [ngClass]="{ 'icon-active': status === 2 || status === 3 }"
+          ></i>
         </div>
         <p class="text">Em transito</p>
       </li>
       <li>
-        <i *ngIf="status3" class="icon uil uil-credit-card"></i>
-        <div class="progress three">
-          <i class="uil uil-check"></i>
+        <div class="progress" [ngClass]="{ 'status-active': status === 3 }">
+          <i
+            class="bi bi-house-down"
+            [ngClass]="{ 'icon-active': status === 3 }"
+          ></i>
         </div>
         <p class="text">Finalizado</p>
       </li>

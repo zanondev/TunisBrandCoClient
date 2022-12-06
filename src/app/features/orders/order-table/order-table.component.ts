@@ -39,8 +39,8 @@ export class OrderTableComponent {
     this.router.navigate(['/orders/edit', id])
   };
 
-  public followOrder(status: number) {
-    this.router.navigate(['/orders/follow', status])
+  public followOrder(id: number) {
+    this.router.navigate(['/orders/follow', id])
   };
 
 }

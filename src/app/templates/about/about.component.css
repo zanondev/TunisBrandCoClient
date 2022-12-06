@@ -36,7 +36,7 @@ a {
 .tunico-dog{
   height: 500px;
   border-radius: 80px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: #ffd000 0px 3px 8px;
 }
 
 .about-text{
