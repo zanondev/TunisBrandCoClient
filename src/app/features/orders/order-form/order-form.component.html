@@ -3,40 +3,41 @@
         <br>
         <div class="form-group">
             <label for="clientId" class="form-label">Id do cliente</label>
-            <input id="clientId" formControlName="clientId" type="number" class="form-control" autocomplete="off" [ngClass]="{
-             'valid': form.get('order.clientId')?.valid && !form.get('order.clientId')?.pristine,
-             'invalid': form.get('order.clientId')?.invalid && !form.get('order.clientId')?.pristine}">
+            <input id="clientId" formControlName="clientId" type="number" class="form-control" autocomplete="off">
         </div>
         <br>
+        <div class="alert alert-danger" [hidden]="form.get('clientId')?.valid || form.get('clientId')?.pristine">
+            <span *ngIf="form.get('clientId')?.errors?.['required']">Informar o ID é obrigatório.</span>
+            <span *ngIf="form.get('clientId')?.errors?.['min']">O ID deve ser maior que zero.</span>
+          </div>
+          <br>
         <div class="form-group">
             <label for="productId" class="form-label">Id do produto</label>
-            <input id="productId" formControlName="productId" type="number" class="form-control" autocomplete="off" [ngClass]="{ 
-                'valid':  form.get('order.productId')?.valid && !form.get('order.productId')?.pristine,
-                'invalid': form.get('order.productId')?.invalid && !form.get('order.productId')?.pristine
-               }">
+            <input id="productId" formControlName="productId" type="number" class="form-control" autocomplete="off">
         </div>
         <br>
+        <div class="alert alert-danger" [hidden]="form.get('productId')?.valid || form.get('productId')?.pristine">
+            <span *ngIf="form.get('productId')?.errors?.['required']">Informar o ID é obrigatório.</span>
+            <span *ngIf="form.get('productId')?.errors?.['min']">O ID deve ser maior que zero.</span>
+          </div>
+          <br>
         <div class="form-group">
             <label for="productQuantity" class="form-label">Quantidade do produto</label>
-            <input id="productQuantity" formControlName="productQuantity" type="number" class="form-control" autocomplete="off" [ngClass]="{ 
-                'valid':  form.get('order.productQuantity')?.valid && !form.get('order.productQuantity')?.pristine,
-                'invalid': form.get('order.productQuantity')?.invalid && !form.get('order.productQuantity')?.pristine
-               }">
+            <input id="productQuantity" formControlName="productQuantity" type="number" class="form-control" autocomplete="off">
         </div>
         <br>
+        <div class="alert alert-danger" [hidden]="form.get('productQuantity')?.valid || form.get('productQuantity')?.pristine">
+            <span *ngIf="form.get('productQuantity')?.errors?.['required']">Informar a quantidade é obrigatório.</span>
+            <span *ngIf="form.get('productQuantity')?.errors?.['min']">A quantidade deve ser maior que zero.</span>
+          </div>
+          <br>
         <div class="form-div-btn">
             <button class="btn btn-primary" (click)="cleanForm()">Limpar</button>
             <input type="submit" value="Salvar" class="btn btn-primary"/> 
         </div>
 
         <br>
-        <div class="alert alert-danger mt-1" *ngIf="form.invalid && !form.pristine">
-            <span *ngIf="form.get('cliendId')?.errors?.['required']">O Id do cliente é obrigatório!<br></span>
-            <span *ngIf="form.get('productId')?.errors?.['required']">O Id do produto é obrigatório!<br></span>
-            <span *ngIf="form.get('productQuantity')?.errors?.['required']">A quantidade do produto é obrigatória!<br></span>
-            <span *ngIf="form.get('cliendId')?.errors?.['min']">O Id do cliente deve ser maior que 0<br></span>
-            <span *ngIf="form.get('productQuantity')?.errors?.['min']">O Id do produto  deve ser maior que 0<br></span>
-       </div>
+    
     </form>
 </div>
 

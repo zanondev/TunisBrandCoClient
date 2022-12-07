@@ -15,17 +15,10 @@
         <br>
         <div class="form-div-btn">
             <button class="btn btn-primary" routerLink="/orders/table">Voltar</button>
-            <input type="submit" value="Salvar" class="btn btn-primary"/> 
+            <input type="submit" value="Salvar" class="btn btn-primary" [disabled]="!form.valid"/> 
         </div>
 
         <br>
-        <div class="alert alert-danger mt-1" *ngIf="form.invalid && !form.pristine">
-            <span *ngIf="form.get('cliendId')?.errors?.['required']">O Id do cliente é obrigatório!<br></span>
-            <span *ngIf="form.get('productId')?.errors?.['required']">O Id do produto é obrigatório!<br></span>
-            <span *ngIf="form.get('productQuantity')?.errors?.['required']">A quantidade do produto é obrigatória!<br></span>
-            <span *ngIf="form.get('cliendId')?.errors?.['min']">O Id do cliente deve ser maior que 0<br></span>
-            <span *ngIf="form.get('productQuantity')?.errors?.['min']">O Id do produto  deve ser maior que 0<br></span>
-       </div>
     </form>
 </div>
 

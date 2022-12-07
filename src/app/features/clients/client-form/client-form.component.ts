@@ -21,7 +21,7 @@ export class ClientFormComponent implements OnInit {
         Validators.required,
         Validators.minLength(3),
       ]),
-      cpf: new FormControl(null, [Validators.required, Validators.maxLength(11)]),
+      cpf: new FormControl(null, [Validators.required, Validators.maxLength(11), Validators.minLength(11)]),
       birthDate: new FormControl(null, [Validators.required]),
     });
   }

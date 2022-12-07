@@ -3,33 +3,36 @@
         <br>
         <div class="form-group">
             <label for="price" class="form-label">Preço</label>
-            <input id="price" formControlName="price" type="number" class="form-control" autocomplete="off" [ngClass]="{
-             'valid': form.get('product.price')?.valid && !form.get('product.price')?.pristine,
-             'invalid': form.get('product.price')?.invalid && !form.get('product.price')?.pristine}">
+            <input id="price" formControlName="price" type="number" class="form-control" autocomplete="off">
         </div>
         <br>
+        <div class="alert alert-danger" [hidden]="form.get('price')?.valid || form.get('price')?.pristine">
+            <span *ngIf="form.get('price')?.errors?.['required']">O preço é obrigatório.</span>
+            <span *ngIf="form.get('price')?.errors?.['min']">O preço deve ser ao menos R$ 1,00.</span>
+          </div>
+          <br>
         <div class="form-group">
             <label for="expiryDate" class="form-label">Fim da coleção</label>
-            <input id="expiryDate" formControlName="expiryDate" type="date" class="form-control" autocomplete="off" [ngClass]="{ 
-                'valid':  form.get('product.expiryDate')?.valid && !form.get('product.expiryDate')?.pristine,
-                'invalid': form.get('product.expiryDate')?.invalid && !form.get('product.expiryDate')?.pristine
-               }">
+            <input id="expiryDate" formControlName="expiryDate" type="date" class="form-control" autocomplete="off">
         </div>
         <br>
+        <div class="alert alert-danger" [hidden]="form.get('expiryDate')?.valid || form.get('expiryDate')?.pristine">
+            <span *ngIf="form.get('expiryDate')?.errors?.['expiryDate']">A data de fim da coleção é obrigatória.</span>
+          </div>
+          <br>
         <div class="form-group">
             <label for="stockQuantity" class="form-label">Estoque</label>
-            <input id="stockQuantity" formControlName="stockQuantity" type="number" class="form-control" autocomplete="off" [ngClass]="{ 
-                'valid':  form.get('product.stockQuantity')?.valid && !form.get('product.stockQuantity')?.pristine,
-                'invalid': form.get('product.stockQuantity')?.invalid && !form.get('product.stockQuantity')?.pristine
-               }">
+            <input id="stockQuantity" formControlName="stockQuantity" type="number" class="form-control" autocomplete="off">
         </div>
         <br>
+        <div class="alert alert-danger" [hidden]="form.get('stockQuantity')?.valid || form.get('stockQuantity')?.pristine">
+            <span *ngIf="form.get('stockQuantity')?.errors?.['required']">Informar o estoque é obrigatório.</span>
+            <span *ngIf="form.get('stockQuantity')?.errors?.['min']">O estoque deve ser ao menos R$ 1,00.</span>
+          </div>
+          <br>
         <div class="form-group">
             <label for="description" class="form-label">Descrição</label>
-            <select class="form-control" id="exampleFormControlSelect1" input id="description" formControlName="description" type="text" class="form-control" autocomplete="off" [ngClass]="{ 
-                'valid':  form.get('product.description')?.valid && !form.get('product.description')?.pristine,
-                'invalid': form.get('product.description')?.invalid && !form.get('product.description')?.pristine
-               }">
+            <select class="form-control" id="exampleFormControlSelect1" input id="description" formControlName="description" type="text">
                 <option>Camiseta modelo BatDog</option>
                 <option>Camiseta modelo Ca$h</option>
                 <option>Camiseta modelo Dolar</option>
@@ -39,21 +42,17 @@
               </select>
         </div>
         <br>
+        <div class="alert alert-danger" [hidden]="form.get('description')?.valid || form.get('description')?.pristine">
+            <span *ngIf="form.get('description')?.errors?.['required']">Informar o modelo é obrigatório.</span>
+          </div>
+          <br>
         <div class="form-div-btn">
             <button class="btn btn-primary" (click)="cleanForm()">Limpar</button>
-            <input type="submit" value="Salvar" class="btn btn-primary"/> 
+            <input type="submit" value="Salvar" class="btn btn-primary" [disabled]="!form.valid"/> 
         </div>
 
         <br>
-        <div class="alert alert-danger mt-1" *ngIf="form.invalid && !form.pristine">
-            <span *ngIf="form.get('price')?.errors?.['required']">O expiryDate do producte é obrigatório!<br></span>
-            <span *ngIf="form.get('expiryDate')?.errors?.['required']">O expiryDate do producte é obrigatório!<br></span>
-            <span *ngIf="form.get('stockQuantity')?.errors?.['required']">O expiryDate do producte é obrigatório!<br></span>
-            <span *ngIf="form.get('description')?.errors?.['required']">O expiryDate do producte é obrigatório!<br></span>
-            <span *ngIf="form.get('price')?.errors?.['min']">O preço deve ser maior que 0<br></span>
-            <span *ngIf="form.get('stockQuantity')?.errors?.['min']">O expiryDate deve ter no máximo 11 digitos<br></span>
-            <span *ngIf="form.get('description')?.errors?.['minlength']">A descrição deve ter no mínimo 3 digitos<br></span>
-       </div>
+    
     </form>
 </div>
 
