@@ -1,0 +1,30 @@
+<div class="sections">
+  <form [formGroup]="form" (ngSubmit)="saveForm()">
+    <br />
+    <div class="form-group">
+      <label for="quantity" class="form-label">Acidicionar quantidade:</label>
+      <input
+        id="quantity"
+        formControlName="quantity"
+        type="number"
+        class="form-control"
+        [(ngModel)]="quantity"
+        autocomplete="off"
+      />
+      <br>
+      <div class="alert alert-danger" [hidden]="form.get('quantity')?.valid || form.get('quantity')?.pristine">
+        <span *ngIf="form.get('quantity')?.errors?.['required']">Informar o quantidade é obrigatório.</span>
+        <span *ngIf="form.get('quantity')?.errors?.['min']">A quantidade deve ser maior que zero.</span>
+      </div>
+      <br>
+    </div>
+    <br />
+    <div class="form-div-btn">
+      <button class="btn btn-primary" (click)="cleanForm()">Voltar</button>
+      <input type="submit" value="Salvar" class="btn btn-primary" [disabled]="!form.valid"/>
+    </div>
+
+    <br />
+  
+  </form>
+</div>

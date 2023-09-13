@@ -1,0 +1,58 @@
+<div class="sections">
+    <form [formGroup]="form" (ngSubmit)="saveForm()">
+        <br>
+        <div class="form-group">
+            <label for="price" class="form-label">Preço</label>
+            <input id="price" formControlName="price" type="number" class="form-control" autocomplete="off">
+        </div>
+        <br>
+        <div class="alert alert-danger" [hidden]="form.get('price')?.valid || form.get('price')?.pristine">
+            <span *ngIf="form.get('price')?.errors?.['required']">O preço é obrigatório.</span>
+            <span *ngIf="form.get('price')?.errors?.['min']">O preço deve ser ao menos R$ 1,00.</span>
+          </div>
+          <br>
+        <div class="form-group">
+            <label for="expiryDate" class="form-label">Fim da coleção</label>
+            <input id="expiryDate" formControlName="expiryDate" type="date" class="form-control" autocomplete="off">
+        </div>
+        <br>
+        <div class="alert alert-danger" [hidden]="form.get('expiryDate')?.valid || form.get('expiryDate')?.pristine">
+            <span *ngIf="form.get('expiryDate')?.errors?.['required']">A data de fim da coleção é obrigatória.</span>
+          </div>
+          <br>
+        <div class="form-group">
+            <label for="stockQuantity" class="form-label">Estoque</label>
+            <input id="stockQuantity" formControlName="stockQuantity" type="number" class="form-control" autocomplete="off">
+        </div>
+        <br>
+        <div class="alert alert-danger" [hidden]="form.get('stockQuantity')?.valid || form.get('stockQuantity')?.pristine">
+            <span *ngIf="form.get('stockQuantity')?.errors?.['required']">Informar o estoque é obrigatório.</span>
+            <span *ngIf="form.get('stockQuantity')?.errors?.['min']">O estoque deve ser maior que zero.</span>
+          </div>
+          <br>
+        <div class="form-group">
+            <label for="description" class="form-label">Descrição</label>
+            <select class="form-control" id="exampleFormControlSelect1" input id="description" formControlName="description" type="text">
+                <option>Camiseta modelo BatDog</option>
+                <option>Camiseta modelo Ca$h</option>
+                <option>Camiseta modelo Dolar</option>
+                <option>Camiseta modelo RGB</option>
+                <option>Camiseta modelo Yellow</option>
+                <option>Camiseta modelo Ward</option>
+              </select>
+        </div>
+        <br>
+        <div class="alert alert-danger" [hidden]="form.get('description')?.valid || form.get('description')?.pristine">
+            <span *ngIf="form.get('description')?.errors?.['required']">Informar o modelo é obrigatório.</span>
+          </div>
+          <br>
+        <div class="form-div-btn">
+            <button class="btn btn-primary" (click)="cleanForm()">Limpar</button>
+            <input type="submit" value="Salvar" class="btn btn-primary" [disabled]="!form.valid"/> 
+        </div>
+
+        <br>
+    
+    </form>
+</div>
+

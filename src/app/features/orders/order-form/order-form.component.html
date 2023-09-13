@@ -1,0 +1,44 @@
+<div class="sections">
+    <form [formGroup]="form" (ngSubmit)="saveForm()">
+        <br>
+        <div class="form-group">
+            <label for="clientId" class="form-label">Id do cliente</label>
+            <input id="clientId" formControlName="clientId" type="number" class="form-control" autocomplete="off">
+        </div>
+        <br>
+        <div class="alert alert-danger" [hidden]="form.get('clientId')?.valid || form.get('clientId')?.pristine">
+            <span *ngIf="form.get('clientId')?.errors?.['required']">Informar o ID é obrigatório.</span>
+            <span *ngIf="form.get('clientId')?.errors?.['min']">O ID deve ser maior que zero.</span>
+          </div>
+          <br>
+        <div class="form-group">
+            <label for="productId" class="form-label">Id do produto</label>
+            <input id="productId" formControlName="productId" type="number" class="form-control" autocomplete="off">
+        </div>
+        <br>
+        <div class="alert alert-danger" [hidden]="form.get('productId')?.valid || form.get('productId')?.pristine">
+            <span *ngIf="form.get('productId')?.errors?.['required']">Informar o ID é obrigatório.</span>
+            <span *ngIf="form.get('productId')?.errors?.['min']">O ID deve ser maior que zero.</span>
+          </div>
+          <br>
+        <div class="form-group">
+            <label for="productQuantity" class="form-label">Quantidade do produto</label>
+            <input id="productQuantity" formControlName="productQuantity" type="number" class="form-control" autocomplete="off">
+        </div>
+        <br>
+        <div class="alert alert-danger" [hidden]="form.get('productQuantity')?.valid || form.get('productQuantity')?.pristine">
+            <span *ngIf="form.get('productQuantity')?.errors?.['required']">Informar a quantidade é obrigatório.</span>
+            <span *ngIf="form.get('productQuantity')?.errors?.['min']">A quantidade deve ser maior que zero.</span>
+          </div>
+          <br>
+        <div class="form-div-btn">
+            <button class="btn btn-primary" (click)="cleanForm()">Limpar</button>
+            <input type="submit" value="Salvar" class="btn btn-primary"/> 
+        </div>
+
+        <br>
+    
+    </form>
+</div>
+
+

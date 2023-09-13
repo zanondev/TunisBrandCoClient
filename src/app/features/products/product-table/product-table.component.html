@@ -1,0 +1,42 @@
+
+    <section class="sections">
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                    <th>Expira em</th>
+                    <th>Ativo</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>{{ product.id }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>{{ product.price }}</td>
+                    <td>{{ product.stockQuantity }}</td>
+                    <td>{{ product.expiryDate | date:'dd/MM/yyyy' }}</td>  
+                    <td>{{ product.isActive }}</td>  
+                    <td class="btn-action">
+                        <div class="btn-add">
+                            <i class="bi bi-plus-circle-fill" title="Adicionar em estoque" (click)="addStockProductTable(product.id)"></i>
+                        </div>
+                        <div class="btn-div">
+                            <i class="bi bi-toggle2-off" title="Ativar"  [hidden]="product.isActive" (click)="UpdateStatusProductTable(product.id)"></i>
+                            <i class="bi bi-toggle2-on" [hidden]="!product.isActive" title="Desativar" (click)="UpdateStatusProductTable(product.id)"></i>
+                        </div>
+                        <div>
+                            <i class="bi bi-pen-fill" title="Editar" (click)="updateProductTable(product.id)"></i>
+                        </div>
+                      </td>         
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+
+
+

@@ -3,4 +3,93 @@ html, body {
     padding: 0;
     background-color: #343434;
     height: 100%;
+    font-family: "Montserrat", sans-serif;
 }
+
+.sections{
+    padding-top: 500px;
+    padding-bottom: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.table
+{
+    width: 80%;
+    text-align: center;
+    font-size: 30px;
+}
+ul{
+    list-style: none;
+}
+#table tr.Feito td {
+    background-color: rgb(95, 12, 12);
+}
+#table td {
+    cursor: pointer;
+}
+
+.btn-danger, .btn-warning{
+    height: 30px;
+    width: 30px;
+    
+    color: white;
+    font-weight: bold;
+}
+
+
+.btn-action{
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-div-btn{
+    display: flex;
+    gap: 10px;
+   }
+   
+   .form-label{
+       color: white;
+       font-weight: bold;
+   }
+
+   .form-group {
+    width: 400px;
+   }
+
+   .bi-pen-fill{
+    color: rgb(245, 230, 30);
+   }
+
+   .bi-trash-fill
+   {
+    color:rgb(185, 43, 18);
+   }
+
+   .bi {
+    cursor: pointer;
+   }
+
+   .bi-plus-circle-fill{
+    color: rgb(31, 197, 31);
+   }
+
+   .bi-airplane-fill{
+    color: rgb(31, 197, 31);
+   }
+
+   .bi-toggle2-on{
+    color: rgb(39, 168, 27);
+   }
+
+   .bi-toggle2-off{
+    color:rgb(185, 43, 18);
+   }
+
+
+
+
+
+

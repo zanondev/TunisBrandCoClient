@@ -1,1 +1,36 @@
-<p>client-table works!</p>
+
+    <section class="sections">
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Data de Nascimento</th>
+                    <th>Pontuação</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let client of clients">
+                    <td>{{ client.id }}</td>
+                    <td>{{ client.name }}</td>
+                    <td>{{ client.cpf }}</td>
+                    <td>{{ client.birthDate | date:'dd/MM/yyyy' }}</td>
+                    <td>{{ client.loyaltyPoints }}</td>  
+                    <td class="btn-action">
+                        <div class="btn-div">
+                            <i class="bi bi-trash-fill" title="Deletar" (click)="deleteClienteTable(client.cpf)"></i>
+                        </div>
+                        <div>
+                            <i class="bi bi-pen-fill" title="Editar" (click)="updateClientTable(client.id)"></i>
+                        </div>
+                      </td>         
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+
+
+

@@ -1,0 +1,25 @@
+<div class="sections">
+    <form [formGroup]="form" (ngSubmit)="saveForm()">
+        <br>
+        <div class="form-group">
+            <label for="description" class="form-label">Status do pedido</label>
+            <select class="form-control" id="exampleFormControlSelect1" input id="status" formControlName="status" type="text" class="form-control" autocomplete="off" [ngClass]="{ 
+                'valid':  form.get('order.status')?.valid && !form.get('order.status')?.pristine,
+                'invalid': form.get('order.status')?.invalid && !form.get('order.status')?.pristine
+               }">
+                <option>Em andamento</option>
+                <option>Em transito</option>
+                <option>Finalizado</option>
+              </select>
+        </div>
+        <br>
+        <div class="form-div-btn">
+            <button class="btn btn-primary" routerLink="/orders/table">Voltar</button>
+            <input type="submit" value="Salvar" class="btn btn-primary" [disabled]="!form.valid"/> 
+        </div>
+
+        <br>
+    </form>
+</div>
+
+

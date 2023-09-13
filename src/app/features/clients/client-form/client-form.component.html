@@ -1,1 +1,42 @@
-<p>client-form works!</p>
+<div class="sections">
+    <form [formGroup]="form" (ngSubmit)="saveForm()">
+        <br>
+        <div class="form-group">
+            <label for="name" class="form-label">Nome</label>
+            <input id="name" formControlName="name" type="text" class="form-control" autocomplete="off">
+        </div>
+        <br>
+        <div class="alert alert-danger" [hidden]="form.get('name')?.valid || form.get('name')?.pristine">
+            <span *ngIf="form.get('name')?.errors?.['required']">O nome é obrigatório.</span>
+            <span *ngIf="form.get('name')?.errors?.['minlength']">O nome precisa ter pelo menos 3 caracteres.</span>
+          </div>
+          <br>
+        <div class="form-group">
+            <label for="cpf" class="form-label">CPF</label>
+            <input id="cpf" formControlName="cpf" type="text" class="form-control" autocomplete="off">
+        </div>
+        <br>
+        <div class="alert alert-danger" [hidden]="form.get('cpf')?.valid || form.get('cpf')?.pristine">
+            <span *ngIf="form.get('cpf')?.errors?.['required']" >O cpf é obrigatório.</span>
+            <span *ngIf="form.get('cpf')?.errors?.['minlength']">O cpf precisa ter 11 digitos.</span>
+            <span *ngIf="form.get('cpf')?.errors?.['maxlength']">O cpf precisa ter 11 digitos.</span>
+          </div>
+          <br>
+        <div class="form-group">
+            <label for="birthDate" class="form-label">Data de Nascimento</label>
+            <input id="birthDate" formControlName="birthDate" type="date" class="form-control" autocomplete="off">
+        </div>
+        <br>
+        <div class="alert alert-danger" [hidden]="form.get('birthDate')?.valid || form.get('birthDate')?.pristine">
+            <span *ngIf="form.get('birthDate')?.errors?.['required']">A data de nascimento é obrigatória.</span>
+          </div>
+          <br>
+        <div class="form-div-btn">
+            <button class="btn btn-primary" (click)="cleanForm()">Limpar</button>
+            <input type="submit" value="Salvar" class="btn btn-primary" [disabled]="!form.valid"/> 
+        </div>
+        <br>
+    </form>
+</div>
+
+
